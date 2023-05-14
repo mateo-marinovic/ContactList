@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "outFile": "../../built/local/tsc.js",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "jsx": "react-jsx",
+    "target": "es2017"
+  },
+  "include": ["src/**/*", "src/App"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
