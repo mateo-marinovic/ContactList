@@ -12,7 +12,7 @@ import {
 
 import ContactsHttp from "http/contacts.http";
 
-const ContactCard = ({ contact, _updateContacts }: Props) => {
+const ContactCard = ({ contact, _updateContacts, _deleteContacts }: Props) => {
   const {
     id,
     profilePicture,
@@ -32,6 +32,13 @@ const ContactCard = ({ contact, _updateContacts }: Props) => {
 
     _updateContacts(newContact);
   };
+  const deleteHandler = async () => {
+    const newDelete = await contactsHttp.deleteContact({
+      id,
+    });
+
+    _deleteContacts(id);
+  };
 
   return (
     <>
@@ -43,7 +50,10 @@ const ContactCard = ({ contact, _updateContacts }: Props) => {
             color={isFavorite ? "red" : "gray"}
             onClick={favoriteHandler}
           />
-          <FontAwesomeIcon icon={faTrash} />
+          <FontAwesomeIcon
+            icon={faTrash}
+            onClick={deleteHandler}
+          />
         </div>
 
         <ImageFrame imageUrl={profilePicture}></ImageFrame>
@@ -66,6 +76,7 @@ const ContactCard = ({ contact, _updateContacts }: Props) => {
 type Props = {
   contact: Contact;
   _updateContacts: (contact: TContact) => void;
+  _deleteContacts: (contact: any) => void;
 };
 
 export default ContactCard;

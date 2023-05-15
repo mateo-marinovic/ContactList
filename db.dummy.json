@@ -1,42 +1,27 @@
 {
   "contacts": [
     {
-      "0": {
-        "isFavorite": true
-      },
-      "id": 0,
-      "name": "Mateo",
-      "surname": "Marinović",
-      "profilePicture": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
-      "phoneNumber": 385955180422,
-      "emailAddress": "blabla0@gmail.com",
-      "isFavorite": true
-    },
-    {
-      "0": {
-        "isFavorite": true
-      },
-      "id": 1,
-      "name": "Ante",
-      "surname": "Antić",
-      "phoneNumber": 385955180422,
-      "emailAddress": "blabla@gmail.com",
-      "profilePicture": "",
-      "isFavorite": true
-    },
-    {
-      "id": 2,
-      "name": "Jakov",
-      "surname": "Jakić",
-      "profilePicture": "",
-      "phoneNumber": 385955180422,
-      "emailAddress": "blabla@gmail.com",
-      "isFavorite": true
-    },
-    {
-      "id": 3,
+      "id": 6,
       "name": "Ivo",
       "surname": "Ivić",
+      "profilePicture": "",
+      "phoneNumber": 38595123456,
+      "emailAddress": "blabla@gmail.com",
+      "isFavorite": false
+    },
+    {
+      "id": 7,
+      "name": "Jakov",
+      "surname": "Jaki",
+      "profilePicture": "",
+      "phoneNumber": 38595123456,
+      "emailAddress": "blabla@gmail.com",
+      "isFavorite": false
+    },
+    {
+      "id": 8,
+      "name": "Pero",
+      "surname": "Perić",
       "profilePicture": "",
       "phoneNumber": 38595123456,
       "emailAddress": "blabla@gmail.com",

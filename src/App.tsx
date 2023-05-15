@@ -57,6 +57,14 @@ function App() {
     setContacts(newContacts);
   };
 
+  const _deleteContacts = (id: number) => {
+    const newArray = contacts.filter((x) => {
+      return x.id !== id;
+    });
+    console.log(id);
+    setContacts(newArray);
+  };
+
   const contactPage = (isFavorites: boolean) => {
     const filteredContacts = isFavorites
       ? contacts.filter(({ isFavorite }) => isFavorite)
@@ -67,6 +75,7 @@ function App() {
         <ContactList
           arr={filteredContacts}
           _updateContacts={_updateContacts}
+          _deleteContacts={_deleteContacts}
         ></ContactList>
       </>
     );

@@ -27,9 +27,11 @@ class ContactsHttp extends HttpClient {
     const { data } = await axios.patch(this.Url(`/contacts/${id}`), contact);
     return new Contact(data);
   }
-  public async deleteContact({ id, ...contact }: any): Promise<Contact> {
-    const { data } = await axios.delete(this.Url(`/contacts/${id}`), contact);
-    return new Contact(data);
+
+  public async deleteContact({ id }: any): Promise<void> {
+    const res = await axios.delete(this.Url(`/contacts/${id}`), {
+      data: id,
+    });
   }
 }
 
